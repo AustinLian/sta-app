@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:staapp/screens/home_page.dart';
 import 'package:staapp/screens/menu_page.dart';
 import 'package:staapp/screens/song_request.dart';
+import 'package:staapp/screens/social_page.dart'; // Import SocialPage
 import 'package:staapp/theme/theme.dart';
 import 'package:staapp/theme/styles.dart';
-import 'package:crystal_navigation_bar/crystal_navigation_bar.dart';
-import 'dart:io';
 
 void main() {
   runApp(const MyApp());
@@ -16,25 +15,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
-        title: 'St. Augustine CHS App',
-        theme: lightTheme,
-        debugShowCheckedModeBanner: false,
-        initialRoute: '/',
-        home: const MainNavigation(),
-        // routes: {
-        //   '/': (context) => const HomePage(),
-        //   '/menu': (context) => const MenuPage(),
-        //   '/songs': (context) => const SongPage(),
-        // }
-        );
-
-
-        
+      title: 'St. Augustine CHS App',
+      theme: lightTheme,
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      home: const MainNavigation(),
+    );
   }
 }
-
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -51,6 +40,7 @@ class _MainNavigationState extends State<MainNavigation> {
     HomePage(),
     MenuPage(),
     SongPage(),
+    SocialPage(), // Add SocialPage to the list of screens
   ];
 
   void _onItemTapped(int index) {
@@ -58,9 +48,6 @@ class _MainNavigationState extends State<MainNavigation> {
       _selectedIndex = index;
     });
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +68,10 @@ class _MainNavigationState extends State<MainNavigation> {
           BottomNavigationBarItem(
             icon: Icon(Icons.music_note),
             label: 'Music',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group), // Correct icon for Socials
+            label: 'Socials', // Correct label for Socials
           ),
         ],
         selectedItemColor: Styles.primary, // Active icon color
