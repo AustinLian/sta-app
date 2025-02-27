@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:staapp/widgets/extras/header.dart';
-import 'package:staapp/widgets/socials/AvailableClubsList.dart'; // Correct import
+import 'package:staapp/widgets/socials/available_clubs_list.dart'; // Correct import
 import 'package:staapp/theme/styles.dart';
 
 class JoinClubPage extends StatelessWidget {
@@ -10,6 +10,15 @@ class JoinClubPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Join a Club"),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(

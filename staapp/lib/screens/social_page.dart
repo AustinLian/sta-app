@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:staapp/widgets/extras/header.dart';
-import 'package:staapp/widgets/socials/ClubsList.dart' as socials;
+import 'package:staapp/widgets/socials/clubs_list.dart'; // Correct import
 import 'package:staapp/theme/styles.dart';
 import 'package:staapp/screens/join_club_page.dart';
 
@@ -34,7 +34,7 @@ class SocialPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 16.0),
-                    const socials.ClubsList(), // Assuming ClubsList is a widget that lists the clubs
+                    const ClubsList(), // Assuming ClubsList is a widget that lists the clubs
                     const SizedBox(height: 16.0),
                     ElevatedButton(
                       onPressed: () {

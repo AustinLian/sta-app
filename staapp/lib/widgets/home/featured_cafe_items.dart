@@ -58,7 +58,7 @@ class CafeItems extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const SongPage()),
+                                                    const MenuPage()),
                                           );
                                         },
                                         child: Text(

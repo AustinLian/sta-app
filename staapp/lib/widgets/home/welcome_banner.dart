@@ -35,14 +35,14 @@ class WelcomeBanner extends StatelessWidget {
                               child: Wrap(
                                 children: [
                                   Text(
-                                    'Welcome Joel Menezes!',
+                                    'Welcome Austin Lian!',
                                     style: theme.textTheme.displayLarge
                                         ?.copyWith(color: Colors.white),
                                     softWrap: true,
                                   ),
                                   Container(height: 10.0),
                                   Text(
-                                      'Today is a beautiful day 1, November 12, 2024',
+                                        'Today is a beautiful day, ${DateTime.now().toLocal().toString().split(' ')[0]}',
                                       style: theme.textTheme.bodyLarge
                                           ?.copyWith(color: Colors.white))
                                 ],
